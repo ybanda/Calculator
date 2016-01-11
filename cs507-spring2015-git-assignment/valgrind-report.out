@@ -1,0 +1,82 @@
+
+[ybanda@pegasus ~]$ valgrind --tool=memcheck --leak-check=full --show-reachable=yes ls -l
+==8171== Memcheck, a memory error detector
+==8171== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==8171== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==8171== Command: ls -l
+==8171==
+total 4
+drwxr-xr-x 2 ybanda games 4096 Jan 23 03:21 test
+==8171==
+==8171== HEAP SUMMARY:
+==8171==     in use at exit: 19,386 bytes in 7 blocks
+==8171==   total heap usage: 229 allocs, 222 frees, 97,395 bytes allocated
+==8171==
+==8171== 5 bytes in 1 blocks are still reachable in loss record 1 of 7
+==8171==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==8171==    by 0x411788: ??? (in /bin/ls)
+==8171==    by 0x4117BB: ??? (in /bin/ls)
+==8171==    by 0x403AC9: ??? (in /bin/ls)
+==8171==    by 0x40802E: ??? (in /bin/ls)
+==8171==    by 0x4089DC: ??? (in /bin/ls)
+==8171==    by 0x3D9801ED5C: (below main) (in /lib64/libc-2.12.so)
+==8171==
+==8171== 22 bytes in 1 blocks are still reachable in loss record 2 of 7
+==8171==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==8171==    by 0x411788: ??? (in /bin/ls)
+==8171==    by 0x40E0DB: ??? (in /bin/ls)
+==8171==    by 0x40439F: ??? (in /bin/ls)
+==8171==    by 0x40802E: ??? (in /bin/ls)
+==8171==    by 0x4089DC: ??? (in /bin/ls)
+==8171==    by 0x3D9801ED5C: (below main) (in /lib64/libc-2.12.so)
+==8171==
+==8171== 23 bytes in 1 blocks are still reachable in loss record 3 of 7
+==8171==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==8171==    by 0x411788: ??? (in /bin/ls)
+==8171==    by 0x40E27B: ??? (in /bin/ls)
+==8171==    by 0x403844: ??? (in /bin/ls)
+==8171==    by 0x404307: ??? (in /bin/ls)
+==8171==    by 0x40802E: ??? (in /bin/ls)
+==8171==    by 0x4089DC: ??? (in /bin/ls)
+==8171==    by 0x3D9801ED5C: (below main) (in /lib64/libc-2.12.so)
+==8171==
+==8171== 24 bytes in 1 blocks are still reachable in loss record 4 of 7
+==8171==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==8171==    by 0x411788: ??? (in /bin/ls)
+==8171==    by 0x40460E: ??? (in /bin/ls)
+==8171==    by 0x40814F: ??? (in /bin/ls)
+==8171==    by 0x4089DC: ??? (in /bin/ls)
+==8171==    by 0x3D9801ED5C: (below main) (in /lib64/libc-2.12.so)
+==8171==
+==8171== 56 bytes in 1 blocks are still reachable in loss record 5 of 7
+==8171==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==8171==    by 0x411788: ??? (in /bin/ls)
+==8171==    by 0x4117BB: ??? (in /bin/ls)
+==8171==    by 0x40E78A: ??? (in /bin/ls)
+==8171==    by 0x408833: ??? (in /bin/ls)
+==8171==    by 0x3D9801ED5C: (below main) (in /lib64/libc-2.12.so)
+==8171==
+==8171== 56 bytes in 1 blocks are still reachable in loss record 6 of 7
+==8171==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==8171==    by 0x411788: ??? (in /bin/ls)
+==8171==    by 0x4117BB: ??? (in /bin/ls)
+==8171==    by 0x40E78A: ??? (in /bin/ls)
+==8171==    by 0x408899: ??? (in /bin/ls)
+==8171==    by 0x3D9801ED5C: (below main) (in /lib64/libc-2.12.so)
+==8171==
+==8171== 19,200 bytes in 1 blocks are still reachable in loss record 7 of 7
+==8171==    at 0x4A06A2E: malloc (vg_replace_malloc.c:270)
+==8171==    by 0x411788: ??? (in /bin/ls)
+==8171==    by 0x408956: ??? (in /bin/ls)
+==8171==    by 0x3D9801ED5C: (below main) (in /lib64/libc-2.12.so)
+==8171==
+==8171== LEAK SUMMARY:
+==8171==    definitely lost: 0 bytes in 0 blocks
+==8171==    indirectly lost: 0 bytes in 0 blocks
+==8171==      possibly lost: 0 bytes in 0 blocks
+==8171==    still reachable: 19,386 bytes in 7 blocks
+==8171==         suppressed: 0 bytes in 0 blocks
+==8171==
+==8171== For counts of detected and suppressed errors, rerun with: -v
+==8171== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[ybanda@pegasus ~]$

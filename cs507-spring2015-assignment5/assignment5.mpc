@@ -1,0 +1,64 @@
+// $Id: assignment5.mpc  2015-03-01 12:09:38Z banday $
+
+project (assignment5) {
+  exename = assignment5
+  install = .
+  specific(make){
+ requires +=cpp11
+  
+ }
+  Source_Files {
+    driver.cpp
+	Add_Expr_Node.cpp
+	Binary_Expr_Node.cpp
+	Divide_Expr_Node.cpp
+	Eval_Expr_Tree.cpp
+	Expr_Builder.cpp
+	Expr_Node.cpp
+	Expr_Node_Factory.cpp
+	Expr_Node_Visitor.cpp
+	Expr_Parser.cpp
+	Expr_Tree.cpp
+	Expr_Tree_Builder.cpp
+	Modulus_Expr_Node.cpp
+	Multiply_Expr_Node.cpp
+	Number_Expr_Node.cpp
+	Subtract_Expr_Node.cpp
+	Tree_Factory_Builder.cpp
+	Unary_Expr_Node.cpp
+	Unary_Minus_Node.cpp
+	
+	Add_Command.cpp
+	Binary_Operator_Command.cpp
+	Bracket_Command.cpp
+	Expr_Command.cpp
+	Number_Command.cpp
+	Subtract_Command.cpp
+	Multiply_Command.cpp
+	Divide_Command.cpp
+	Modulus_Command.cpp
+	Expr_Command_Factory.cpp
+	Number_Command.cpp
+	Stack_Expr_Command_Factory.cpp
+	Infix_To_Postfix_Command.cpp
+	
+	ExprTree_Evaluator_Strategy.cpp
+	Flyweight_Expr_Command_Factory.cpp
+	Stack_Expr_Command_Factory.cpp
+	Expr_Evaluator_Strategy.cpp
+Postfix_Evaluator_Strategy.cpp
+Postfix_Flyweight_Strategy.cpp
+ExprTree_Evaluator_Strategy.cpp
+	
+  }
+
+  Template_Files {
+  
+    Array.cpp
+	Stack.cpp
+	Expr_Command_Iterator.cpp
+	
+  }
+
+
+}

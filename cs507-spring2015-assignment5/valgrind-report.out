@@ -1,0 +1,226 @@
+[ybanda@pegasus Assignment5]$ valgrind  --leak-check=full ./assignment5 <input.txt
+==21531== Memcheck, a memory error detector
+==21531== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==21531== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==21531== Command: ./assignment5
+==21531==
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result ::7
+Time Taken to Parse is = 20msec
+Time Taken to Evaluate  the Expression = 10msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result ::10
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result ::9
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+90
+Time Taken to Parse is = 20msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+1
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+30
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+61
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+9
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =10401
+Time Taken to Parse is = 20msec
+Time Taken to Evaluate  the Expression = 10msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =163
+Time Taken to Parse is = 10msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =34
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =-4
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 10msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =3
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =36
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =-72
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =4
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 10msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+Result =-2
+Time Taken to Parse is = 0msec
+Time Taken to Evaluate  the Expression = 0msecs
+Enter an Version of Calculator
+1 for Postfix , 2 for FlyWeight , 3 for Tree
+Enter an expression , QUIT to Exit the Application
+==21531==
+==21531== HEAP SUMMARY:
+==21531==     in use at exit: 5,536 bytes in 206 blocks
+==21531==   total heap usage: 837 allocs, 631 frees, 28,439 bytes allocated
+==21531==
+==21531== 8 bytes in 1 blocks are definitely lost in loss record 2 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x408255: Expr_Command_Factory::create_modulus_command() (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408B45: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A97B: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 16 bytes in 2 blocks are definitely lost in loss record 3 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x4083E9: Expr_Command_Factory::create_add_command() (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408AB1: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408D12: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A97B: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 16 bytes in 2 blocks are definitely lost in loss record 4 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x4082FD: Expr_Command_Factory::create_multiply_command() (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408AFB: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408D12: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408D12: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A97B: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 16 bytes in 2 blocks are definitely lost in loss record 5 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x4083E9: Expr_Command_Factory::create_add_command() (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408AB1: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408D12: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A996: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 16 bytes in 2 blocks are definitely lost in loss record 6 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x4082FD: Expr_Command_Factory::create_multiply_command() (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408AFB: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408D12: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408D12: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A996: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 24 bytes in 1 blocks are definitely lost in loss record 7 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x4031E3: preprocess(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4033A9: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 32 bytes in 2 blocks are definitely lost in loss record 9 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x408398: Expr_Command_Factory::create_number_command(int) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408D89: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A97B: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 40 bytes in 5 blocks are definitely lost in loss record 11 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x4083E9: Expr_Command_Factory::create_add_command() (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408AB1: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A72B: Postfix_Evaluator_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 120 bytes in 15 blocks are definitely lost in loss record 14 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x4083E9: Expr_Command_Factory::create_add_command() (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408AB1: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A97B: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 128 bytes in 8 blocks are definitely lost in loss record 16 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x408398: Expr_Command_Factory::create_number_command(int) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408FD1: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A72B: Postfix_Evaluator_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 304 bytes in 19 blocks are definitely lost in loss record 20 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x408398: Expr_Command_Factory::create_number_command(int) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x408FD1: Infix_To_Postfix_Command::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Expr_Command*>&, bool) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x40A97B: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 368 (96 direct, 272 indirect) bytes in 3 blocks are definitely lost in loss record 25 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x40A753: Postfix_Evaluator_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 920 (160 direct, 760 indirect) bytes in 5 blocks are definitely lost in loss record 28 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x40A9A3: Postfix_Flyweight_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 936 (216 direct, 720 indirect) bytes in 9 blocks are definitely lost in loss record 29 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x409EF2: ExprTree_Evaluator_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== 2,592 (288 direct, 2,304 indirect) bytes in 9 blocks are definitely lost in loss record 30 of 30
+==21531==    at 0x4A075FC: operator new(unsigned long) (vg_replace_malloc.c:298)
+==21531==    by 0x409EC7: ExprTree_Evaluator_Strategy::parse_expression(std::string const&) (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==    by 0x4034BB: main (in /home/ybanda/OODP/Assignment5/assignment5)
+==21531==
+==21531== LEAK SUMMARY:
+==21531==    definitely lost: 1,480 bytes in 85 blocks
+==21531==    indirectly lost: 4,056 bytes in 121 blocks
+==21531==      possibly lost: 0 bytes in 0 blocks
+==21531==    still reachable: 0 bytes in 0 blocks
+==21531==         suppressed: 0 bytes in 0 blocks
+==21531==
+==21531== For counts of detected and suppressed errors, rerun with: -v
+==21531== ERROR SUMMARY: 15 errors from 15 contexts (suppressed: 6 from 6)

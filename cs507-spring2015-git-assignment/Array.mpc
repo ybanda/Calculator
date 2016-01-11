@@ -1,0 +1,13 @@
+// $Id: Array.mpc 1469 2014-01-15 00:17:27Z hillj $
+
+project (Array) {
+  exename = Array
+  install = .
+
+  Source_Files {
+    Array.cpp
+
+    // Uncomment the line below when you have created your driver source file.
+    driver.cpp
+  }
+}
